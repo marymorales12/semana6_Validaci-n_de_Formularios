@@ -1,0 +1,106 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+  background-color: #f8fff5; 
+  font-family: Arial, sans-serif; 
+}
+
+/* ======== GALERÍA DE IMÁGENES DINÁMICA ======== */
+.galeria {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas responsivas según el ancho disponible */
+  gap: 1rem; 
+}
+
+.galeria img {
+  width: 100%; /* Imágenes adaptan su ancho al contenedor */
+  height: auto; /* Mantienen proporción original */
+  cursor: pointer; /* Cursor tipo "mano" para indicar interactividad */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animaciones suaves al pasar el mouse */
+  border: 4px solid transparent; /* Sin borde por defecto, para poder resaltar luego */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+}
+
+.galeria img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Clase aplicada cuando una imagen es seleccionada */
+.galeria img.seleccionada {
+  border: 4px solid #28a745; 
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.7); 
+}
+
+/* ======== BOTÓN PRIMARIO PERSONALIZADO ======== */
+.btn-primary {
+  background-color: #ff5733; /* Naranja intenso como color de fondo */
+  border-color: #97c726; /* Borde verde limón */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animaciones al pasar el mouse */
+}
+
+/* Efecto hover en el botón primario */
+.btn-primary:hover {
+  background-color: #6029e0; /* Cambia a púrpura */
+  transform: scale(1.05); /* Ligeramente más grande */
+}
+
+/* ======== TARJETAS ======== */
+.card {
+  box-shadow: 0 4px 8px rgba(207, 224, 53, 0.904); /* Sombra amarilla suave */
+  border-radius: 1rem; /* Bordes redondeados para suavizar el diseño */
+  transition: transform 0.3s ease; /* Suaviza el movimiento */
+}
+
+/* Efecto hover en las tarjetas */
+.card:hover {
+  transform: translateY(-5px); /* Se eleva ligeramente al pasar el mouse */
+}
+
+/* ======== IMÁGENES ======== */
+img {
+  border-radius: 0.5rem; /* Todas las imágenes (incluidas en tarjetas o listas) tienen esquinas redondeadas */
+}
+
+/* ======== CAMPOS DE FORMULARIO ======== */
+input.form-control,
+textarea.form-control {
+  border-radius: 0.5rem; /* Bordes suaves en entradas */
+  border: 1px solid #14c53a; /* Borde verde claro por defecto */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones al enfocarse */
+}
+
+/* Estilo al hacer foco en campos de texto */
+input.form-control:focus,
+textarea.form-control:focus {
+  border-color: #ff5733; /* Borde naranja */
+  box-shadow: 0 0 0 0.25rem rgba(97, 198, 211, 0.699); /* Resplandor celeste */
+}
+
+/* ======== ENCABEZADO Y NAVEGACIÓN ======== */
+.navbar {
+  background-color: #20ca2e !important; /* Verde fuerte para la barra de navegación */
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important; /* Letras blancas para contraste */
+}
+
+/* ======== MEDIA QUERY (RESPONSIVE) ======== */
+@media (max-width: 576px) {
+  body {
+    background-color: #c73471; /
+  }
+
+  h1, h2, h3 {
+    color: #227da7;
+  }
+
+  .navbar {
+    background-color: #20ca2e !important; /* Mantiene el verde en pantallas pequeñas */
+  }
+
+  .btn-primary {
+    width: 100%; /* Botón ocupa todo el ancho disponible */
+    font-size: 1.2rem; /* Letra más grande para facilidad táctil */
+  }
+}
