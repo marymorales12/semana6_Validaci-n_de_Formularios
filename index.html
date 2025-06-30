@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Documento HTML principal -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <title>EcoVogue</title> <!-- Título de la pestaña del navegador -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Escalado para dispositivos móviles -->
+
+  <!-- Bootstrap CSS para estilos prediseñados -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar con enlaces -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">EcoVogue</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contenido">Contenido</a></li>
+            <li class="nav-item"><a class="nav-link" href="#curiosidades">Curiosidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container my-5">
+
+    <!-- Sección de bienvenida -->
+    <section id="inicio" class="text-center mb-5">
+      <h1>Bienvenidos a EcoVogue</h1>
+      <p><strong>¡Visítanos y sé parte del cambio!</strong> EcoVogue te invita a descubrir moda sostenible, responsable y con estilo.</p>
+    </section>
+
+    <!-- Sección de galería dinámica -->
+    <section class="mb-5">
+      <h2>Galería de Imágenes</h2>
+      <div class="formulario mb-3">
+        <!-- Campo para ingresar URL de imagen -->
+        <input type="url" id="urlInput" class="form-control mb-2" placeholder="Ingresa URL de la imagen">
+        <!-- Botón para agregar imagen -->
+        <button id="agregarBtn" class="btn btn-success me-2">Agregar Imagen</button>
+        <!-- Botón para eliminar imagen seleccionada -->
+        <button id="eliminarBtn" class="btn btn-danger">Eliminar Imagen Seleccionada</button>
+      </div>
+      <!-- Contenedor de la galería -->
+      <div class="galeria d-grid gap-3" id="galeria"></div>
+    </section>
+
+    <!-- Sección de curiosidades con carrusel de imágenes -->
+    <section id="curiosidades" class="mb-5">
+      <h2>Curiosidades</h2>
+      <!-- Carrusel de Bootstrap para mostrar múltiples imágenes -->
+      <div id="curiosidadesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/assets/img/slider_botellas.jpeg" class="d-block w-100" alt="Curiosidad 1">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/img/slider_stela.jpg" class="d-block w-100" alt="Curiosidad 2">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/img/slider_vestidos.jpg" class="d-block w-100" alt="Curiosidad 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#curiosidadesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#curiosidadesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Sección de tarjetas -->
+    <section class="row text-center mb-5">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="https://cdn.prod.website-files.com/65f0ca99d5eae2cef18b2cb8/664e43994c2a14d71d45056d_66356d5ab51366db60ff2565_BOARD-FINAL-768x506-1.jpeg" class="card-img-top img-fluid" alt="Moda Responsable">
+          <div class="card-body">
+            <h3 class="card-title">Moda Responsable</h3>
+            <p class="card-text">Descubre cómo tu ropa puede tener una segunda vida y reducir el impacto ambiental.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="https://agenciatierraviva.com.ar/wp-content/uploads/2021/05/educacion_ambiental_nin%CC%83os.jpg" class="card-img-top img-fluid" alt="Educación Ambiental">
+          <div class="card-body">
+            <h3 class="card-title">Educación Ambiental</h3>
+            <p class="card-text">Infórmate sobre la importancia del reciclaje textil y su contribución al planeta.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="https://contenedoresdereciclaje.com/wp-content/uploads/2025/01/Reciclaje-de-Ropa-768x576.webp" class="card-img-top img-fluid" alt="Infografía reciclaje">
+          <div class="card-body">
+            <h3 class="card-title">Infografías</h3>
+            <p class="card-text">Visualiza cómo pequeñas acciones generan grandes cambios ecológicos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- (Resto del contenido permanece igual...) -->
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-light text-center py-4">
+    <p>&copy; 2025 EcoVogue - Todos los derechos reservados.</p>
+    <a href="#">Términos</a> | <a href="#">Política</a> | <a href="#">Contacto</a>
+  </footer>
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script personalizado para galería -->
+  <script src="script.js"></script>
+</body>
+</html>
